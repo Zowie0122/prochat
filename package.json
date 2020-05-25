@@ -1,0 +1,37 @@
+{
+  "name": "prochat",
+  "version": "1.0.0",
+  "description": "Social network for professionals",
+  "main": "server.js",
+  "repository": "https://github.com/Zowie0122/prochat.git",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Garrett&Zowie(CC12)",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "gravatar": "^1.8.0",
+    "html2canvas": "^1.0.0-rc.5",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "jspdf": "^1.5.3",
+    "mongoose": "^5.9.12",
+    "normalize-url": "^5.0.0",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "v12.16.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
+  }
+}
